@@ -1,0 +1,38 @@
+// Font Import
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+// Colors Init
+$yellow: #e5ff84;
+$green: #a6ff94;
+$purple: #c268ff;
+$orange: #ffc856;
+$red: #ff8181;
+
+.App {
+  font-family: "Oswald", sans-serif;
+  background: linear-gradient(
+    $purple 0%,
+    $red 25%,
+    $orange 50%,
+    $yellow 75%,
+    $green 100%
+  );
+  height: auto;
+  color: $green;
+  section {
+    display: flex;
+    height: 1000px;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+p {
+  color: $red;
+  font-size: 14px;
+}
+
+h1 {
+}
+h2 {
+}

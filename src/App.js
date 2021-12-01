@@ -1,15 +1,25 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Intro from "./components/Intro/Intro";
+import About from "./components/About/About";
+import Join from "./components/Join/Join";
+import Footer from "./components/Footer/Footer";
+
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="header">{/* <Navbar /> */}</header>
-      <body>
-        <section>First Section</section>
-        <section>Second Section</section>
-        <section>Third Section</section>
-      </body>
+      <div className="wrapper">
+        <div className="header">
+          <Navbar />
+        </div>
+        <div className="main">
+          <Intro />
+          <About />
+          <Join />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
