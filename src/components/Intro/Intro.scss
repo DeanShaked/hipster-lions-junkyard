@@ -7,11 +7,11 @@
   flex-direction: column;
   font-family: "Creepster", cursive;
   background: #00ff77;
-  // Main title
-  .title {
-    padding-top: 5rem;
-  }
 
+  .mint-button {
+    background-color: #ff8181;
+    align-self: flex-end;
+  }
   // Intro content wrapper
   .intro-wrapper {
     display: flex;
@@ -29,6 +29,9 @@
         p {
           width: 600px;
         }
+        span {
+          color: #ff8181;
+        }
       }
       .mint-wrapper {
         display: flex;
@@ -42,7 +45,7 @@
     justify-content: center;
     svg {
       height: auto;
-      width: 600px;
+      width: 700px;
       animation: floatAnim 6s ease-in-out infinite;
     }
   }

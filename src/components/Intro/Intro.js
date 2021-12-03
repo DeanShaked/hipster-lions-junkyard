@@ -14,25 +14,35 @@ const Intro = () => {
   const [userSelect, setuserSelect] = useState("How Much ?!?!");
   return (
     <section className="intro">
-      <h1 className="title">Hipster Lions Junkyard</h1>
+      <MintButton text="Connect Wallet" />
+      <div className="top-intro">
+        <h1 className="title">Hipster Lions Junkyard</h1>
+      </div>
       <div className="intro-wrapper">
         <div className="left-content">
           <div className="text-wrapper">
             <h3>Joint our ride !</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Perspiciatis architecto repellat nesciunt beatae quibusdam
-              similique corrupti placeat nostrum nisi aperiam eaque corporis
-              quasi at veniam nulla possimus, distinctio quis asperiores odit
-              dolor soluta praesentium! Voluptates nam voluptate neque! Commodi
-              quod voluptatibus inventore, aliquam eum voluptates facilis nobis,
-              eos at, doloribus voluptate quibusdam aut atque blanditiis? Eaque
-              iste nobis, quis consequatur eius vitae magni ipsam excepturi
-              tenetur aperiam repudiandae vel tempora fugit voluptas similique
-              sunt maiores optio quam, maxime voluptatem. A natus blanditiis
-              reprehenderit! Maiores repudiandae fuga libero. Natus ea officia
-              in explicabo neque non dicta eaque, optio, asperiores minus
-              aperiam!
+              Hipster Lions Junkyard is a <span>community-driven </span>
+              collectibles NFT project. Lion NFTs are made up with over a
+              hundred <span> exciting traits </span> of faces, hair, hats, body
+              and backgrounds. <br /> Each Lion is a <span>unique</span>,
+              non-fungible token (NFT) on the Ethereum blockchain. <br />
+              Holding a Lion allows you to participate in coordinating the
+              Hipster Lions Junkyard <span>
+                Community Treasury.
+              </span> <br /> This <span>Treasury </span> will be seeded with{" "}
+              <span>420 ETH </span> after the public sale ends! <br /> Holders
+              can vote for experiences, activations and campaigns that{" "}
+              <span>benefit </span>
+              the Hipster Lions Junkyard. <br /> The road map for Hipster Lions
+              Junkyard is <span>collaborative </span>and will be decided by Lion
+              holders. With imaginative ideas, adequate resources and
+              coordination, we believe we can bring Hipster Lions Junkyard to
+              every vertical of popular culture! The Hipster Lions Junkyard
+              public sales opens on{" "}
+              <span>Sunday, October 17th around 7pm PDT.</span> <br /> Join the
+              Hipster Lions Junkyard community on Twitter or Discord!
             </p>
           </div>
           <div className="mint-wrapper">
@@ -59,7 +69,7 @@ const Intro = () => {
                 }}
               />
             </Dropdown>
-            <MintButton />
+            <MintButton text="MINT" />
           </div>
         </div>
         <div className="lion-logo">

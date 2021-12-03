@@ -1,8 +1,8 @@
 import React from "react";
 import "./MintButton.scss";
 
-const MintButton = () => {
-  return <button className="mint-button">Mint</button>;
+const MintButton = ({ text }) => {
+  return <button className="mint-button">{text}</button>;
 };
 
 export default MintButton;
