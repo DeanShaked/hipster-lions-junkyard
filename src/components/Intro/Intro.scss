@@ -1,0 +1,61 @@
+// Font Import
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+.intro {
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Creepster", cursive;
+  background: #00ff77;
+  // Main title
+  .title {
+    padding-top: 5rem;
+  }
+
+  // Intro content wrapper
+  .intro-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 5rem;
+
+    // Left side content
+    .left-content {
+      text-align: left;
+      margin-top: 6rem;
+      width: 600px;
+      .text-wrapper {
+        margin-bottom: 2rem;
+        p {
+          width: 600px;
+        }
+      }
+      .mint-wrapper {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .lion-logo {
+    display: flex;
+    justify-content: center;
+    svg {
+      height: auto;
+      width: 600px;
+      animation: floatAnim 6s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes floatAnim {
+  0% {
+    transform: translate(0px, 10px);
+  }
+  50% {
+    transform: translate(0px, 30px);
+  }
+  100% {
+    transform: translate(0px, 10px);
+  }
+}

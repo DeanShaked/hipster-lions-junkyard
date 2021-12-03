@@ -1,38 +1,60 @@
-// Font Import
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
-
 // Colors Init
 $yellow: #e5ff84;
 $green: #a6ff94;
+$green-title: #00ff77;
 $purple: #c268ff;
 $orange: #ffc856;
 $red: #ff8181;
 
+// Font Import
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+// General Sizing
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  font-family: "Oswald", sans-serif;
-  background: linear-gradient(
-    $purple 0%,
-    $red 25%,
-    $orange 50%,
-    $yellow 75%,
-    $green 100%
-  );
-  height: auto;
-  color: $green;
   section {
     display: flex;
-    height: 1000px;
     font-size: 24px;
     text-align: center;
-    justify-content: center;
   }
-}
-p {
-  color: $red;
-  font-size: 14px;
 }
 
 h1 {
+  color: #c268ff;
+  font-weight: 600;
+  font-size: 100px;
+  letter-spacing: 6px;
+  text-shadow: -1px -1px 0px #00ff77, 3px 3px 0px #00ff77, 6px 6px 0px #00ff77,
+    9px 9px 9px #c268ff;
+  font-family: "Creepster", cursive;
 }
-h2 {
+h3 {
+  font-size: 36px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: #c268ff;
+  text-shadow: -1px -1px 0px #00ff77, 1px 1px 0px #00ff77, 2px 2px 0px #00ff77,
+    3px 3px 3px #c268ff;
+  margin-bottom: 1rem;
+  font-family: "Creepster", cursive;
+}
+
+input[type="text"] {
+  font-family: "Creepster", cursive;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  font-family: "Creepster", cursive;
+}
+p {
+  color: #c268ff;
+  font-size: 18px;
 }
