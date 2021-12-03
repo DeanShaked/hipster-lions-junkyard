@@ -1,6 +1,10 @@
 // App
 import React, { useState } from "react";
 
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+import { addmetaMaskAccountAddress } from "../../redux/slicers/appSlice";
+
 // Components
 import { ReactComponent as LionSvg } from "../../assets/lion.svg";
 import MintButton from "../UI/mintButton/MintButton";
@@ -11,10 +15,30 @@ import DropdownSelectItem from "../UI/Dropdown/DropdownSelectItem";
 import "./Intro.scss";
 
 const Intro = () => {
+  const dispatch = useDispatch();
+  const { ethereum } = window;
   const [userSelect, setuserSelect] = useState("How Much ?!?!");
+
+  const metaMaskAddress = useSelector(
+    (state) => state.app.metaMaskAccountAddress
+  );
+
+  const onClickConnect = async () => {
+    try {
+      await ethereum.request({ method: "eth_requestAccounts" });
+      const accountAddress = await ethereum.request({ method: "eth_accounts" });
+      dispatch(addmetaMaskAccountAddress(accountAddress));
+    } catch (error) {
+      alert(error);
+    }
+  };
+  console.log(metaMaskAddress);
   return (
     <section className="intro">
-      <MintButton text="Connect Wallet" />
+      {metaMaskAddress === "" && (
+        <MintButton text="Connect Wallet" cbFunc={onClickConnect} />
+      )}
+
       <div className="top-intro">
         <h1 className="title">Hipster Lions Junkyard</h1>
       </div>
@@ -68,8 +92,15 @@ const Intro = () => {
                   setuserSelect(10);
                 }}
               />
-            </Dropdown>
-            <MintButton text="MINT" />
+            </Dropdown>{" "}
+            <MintButton text="MINT" cbFunc={null} />
+          </div>
+          <div className="metamask-address">
+            {metaMaskAddress && (
+              <p>
+                MetaMask Address: <span>{metaMaskAddress}</span>
+              </p>
+            )}
           </div>
         </div>
         <div className="lion-logo">

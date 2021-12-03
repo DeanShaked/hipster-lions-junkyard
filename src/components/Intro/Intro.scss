@@ -7,11 +7,14 @@
   flex-direction: column;
   font-family: "Creepster", cursive;
   background: #00ff77;
-
+  .top-intro {
+    padding-top: 1rem;
+  }
   .mint-button {
     background-color: #ff8181;
     align-self: flex-end;
   }
+
   // Intro content wrapper
   .intro-wrapper {
     display: flex;
@@ -36,6 +39,24 @@
       .mint-wrapper {
         display: flex;
         align-items: center;
+        .mint-button {
+          background-color: #c268ff !important;
+          align-self: flex-end;
+        }
+        h5 {
+          display: flex;
+          align-self: center;
+        }
+      }
+      .metamask-address {
+        display: flex;
+        justify-content: center;
+        color: #ff8181;
+        font-weight: 300 !important;
+        letter-spacing: 2px;
+        span {
+          color: #ff8181 !important;
+        }
       }
     }
   }
@@ -46,7 +67,7 @@
     svg {
       height: auto;
       width: 700px;
-      animation: floatAnim 6s ease-in-out infinite;
+      animation: floatAnim 4s ease-in-out infinite;
     }
   }
 }
