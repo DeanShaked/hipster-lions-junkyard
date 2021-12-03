@@ -35,10 +35,6 @@ const Intro = () => {
   console.log(metaMaskAddress);
   return (
     <section className="intro">
-      {metaMaskAddress === "" && (
-        <MintButton text="Connect Wallet" cbFunc={onClickConnect} />
-      )}
-
       <div className="top-intro">
         <h1 className="title">Hipster Lions Junkyard</h1>
       </div>
@@ -103,8 +99,15 @@ const Intro = () => {
             )}
           </div>
         </div>
-        <div className="lion-logo">
-          <LionSvg />
+        <div className="right-content">
+          <div className="lion-logo">
+            <LionSvg />
+          </div>
+          <div>
+            {metaMaskAddress === "" && (
+              <MintButton text="Connect Wallet" cbFunc={onClickConnect} />
+            )}
+          </div>
         </div>
       </div>
     </section>

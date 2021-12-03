@@ -7,9 +7,7 @@
   flex-direction: column;
   font-family: "Creepster", cursive;
   background: #00ff77;
-  .top-intro {
-    padding-top: 1rem;
-  }
+  padding-top: 4rem;
   .mint-button {
     background-color: #ff8181;
     align-self: flex-end;
@@ -61,13 +59,21 @@
     }
   }
 
-  .lion-logo {
+  .right-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    svg {
-      height: auto;
-      width: 700px;
-      animation: floatAnim 4s ease-in-out infinite;
+    .lion-logo {
+      height: 650px;
+      svg {
+        height: 650px;
+        width: 650px;
+        animation: floatAnim 4s ease-in-out infinite;
+      }
+    }
+    .mint-button {
+      align-self: center;
+      z-index: 10;
     }
   }
 }
@@ -83,7 +89,7 @@ p {
     transform: translate(0px, 20px);
   }
   50% {
-    transform: translate(0px, 50px);
+    transform: translate(0px, 35px);
   }
   100% {
     transform: translate(0px, 20px);
