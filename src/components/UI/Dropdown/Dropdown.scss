@@ -21,11 +21,11 @@
   // Colors
   color: #c268ff;
   background-color: #00ff77;
-  box-shadow: #c268ff 0px 0px 10px 1px inset;
+  box-shadow: #c268ff 0px 0px 3px 3px inset;
   position: absolute;
   width: 100%;
   user-select: none;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease-in-out;
   z-index: 2;
 }
 
@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: center;
   min-height: 50px;
-  transition: all 0.2s ease;
+  transition: all 0.6s ease;
 }
 
 .dropdown-select-item-active {

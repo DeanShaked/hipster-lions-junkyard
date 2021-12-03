@@ -17,20 +17,11 @@ const Dropdown = (props) => {
         <div className="dropdown-closed" onClick={() => setIsOpen(!isOpen)}>
           {!isOpen && selectedItemName ? (
             <div className="selected-dropdown-element selected-dropdown-element-active">
-              {selectedItemIcon && (
-                <div className="dropdown-item-icon-small">
-                  {selectedItemIcon}
-                </div>
-              )}
               {selectedItemName}
             </div>
           ) : (
             <div className="selected-dropdown-element">{title}</div>
           )}
-
-          <span className="arrow-down">
-            <ArrowDownSvg />
-          </span>
         </div>
 
         {isOpen && (
