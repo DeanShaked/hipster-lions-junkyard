@@ -1,10 +1,6 @@
 // Colors Init
-$yellow: #e5ff84;
-$green: #a6ff94;
 $green-title: #00ff77;
 $purple: #c268ff;
-$orange: #ffc856;
-$red: #ff8181;
 
 // Font Import
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
@@ -33,8 +29,9 @@ h1 {
     9px 9px 9px #c268ff;
   font-family: "Creepster", cursive;
 }
+
 h3 {
-  font-size: 36px;
+  font-size: 48px;
   text-transform: capitalize;
   letter-spacing: 2px;
   color: #c268ff;
@@ -44,17 +41,7 @@ h3 {
   font-family: "Creepster", cursive;
 }
 
-input[type="text"] {
-  font-family: "Creepster", cursive;
-  text-align: center;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  font-family: "Creepster", cursive;
-}
-p {
-  color: #c268ff;
-  font-size: 18px;
+hr {
+  height: 30px;
+  border: none;
 }

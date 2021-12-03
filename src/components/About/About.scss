@@ -1,0 +1,21 @@
+// Font Import
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+.about {
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Creepster", cursive;
+  background: #c268ff;
+  color: #00ff77;
+
+  .title {
+    padding-top: 10rem;
+    color: #00ff77;
+    text-shadow: -1px -1px 0px #c268ff, 3px 3px 0px #c268ff, 6px 6px 0px #c268ff,
+      9px 9px 9px #00ff77;
+  }
+
+  .about-wrapper {
+  }
+}
