@@ -45,3 +45,14 @@ hr {
   height: 30px;
   border: none;
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: #ff8181;
+  font-family: "Creepster", cursive;
+  color: #c268ff;
+  letter-spacing: 1px;
+}

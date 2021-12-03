@@ -13,6 +13,10 @@ function App() {
         <About />
         {/* <Join /> */}
       </div>
+      <footer>
+        Created by Hipster Lions Junkyard with special ♥️ to our partners and
+        the support from the community, our friends, families, and loved ones.
+      </footer>
     </div>
   );
 }
