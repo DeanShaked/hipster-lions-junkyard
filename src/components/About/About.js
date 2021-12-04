@@ -1,42 +1,41 @@
+// App
 import React from "react";
+import { ourCollection, anchors } from "../../utils/Data";
 
-import { ReactComponent as DiscordSvg } from "../../assets/discord.svg";
-import { ReactComponent as TwitterSvg } from "../../assets/twitter.svg";
-import { ReactComponent as InstagramSvg } from "../../assets/instagram.svg";
+// Components
+
+import AssetItem from "../UI/AssetItem/AssetItem";
+import Anchor from "../UI/Anchor/Anchor";
+
+// Styles
 import "./About.scss";
 
 const About = () => {
   return (
     <section className="about">
-      <h1 className="title">about The Team</h1>
+      <h1 className="title">Our Collection</h1>
       <div className="about-wrapper">
+        {ourCollection.map((asset) => {
+          return (
+            <div className="asset-card">
+              <AssetItem
+                title={asset.title}
+                description={asset.description}
+                img={asset.img}
+              />
+            </div>
+          );
+        })}
+
         {/* Social Media */}
         <div className="social-media">
           <div className="social-media-text">
             Join our community already you junky hipster !
           </div>
           <div className="social-media-icons">
-            <a
-              href="https://discord.gg/sJKtM9AC"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <DiscordSvg />
-            </a>
-            <a
-              href="https://twitter.com/HipsterLionsJKY"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <TwitterSvg />
-            </a>
-            <a
-              href="https://www.instagram.com/hipsterlions_jky/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <InstagramSvg />
-            </a>
+            {anchors.map((anchor) => {
+              return <Anchor img={anchor.img} link={anchor.link} />;
+            })}
           </div>
         </div>
       </div>

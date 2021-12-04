@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { ReactComponent as ArrowDownSvg } from "../../../assets/arrow-down.svg";
 
 import "./Dropdown.scss";
 
 const Dropdown = (props) => {
-  const { title, selectedItemName, selectedItemIcon, children } = props;
+  const { title, selectedItemName, children } = props;
   const [isOpen, setIsOpen] = useState(false);
 
   return (

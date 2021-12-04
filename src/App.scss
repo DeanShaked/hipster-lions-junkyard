@@ -23,7 +23,7 @@ $purple: #c268ff;
 h1 {
   color: #c268ff;
   font-weight: 600;
-  font-size: 100px;
+  font-size: 10vh;
   letter-spacing: 6px;
   text-shadow: -1px -1px 0px #00ff77, 3px 3px 0px #00ff77, 6px 6px 0px #00ff77,
     9px 9px 9px #c268ff;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 6vh;
   text-transform: capitalize;
   letter-spacing: 2px;
   color: #c268ff;
@@ -41,16 +41,11 @@ h3 {
   font-family: "Creepster", cursive;
 }
 
-hr {
-  height: 30px;
-  border: none;
-}
-
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 4vh;
   background-color: #ff8181;
   font-family: "Creepster", cursive;
   color: #c268ff;

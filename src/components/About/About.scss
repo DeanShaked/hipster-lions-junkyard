@@ -2,10 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
 
 .about {
-  height: 1080px;
+  height: 250vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   font-family: "Creepster", cursive;
   background: #c268ff;
   color: #00ff77;
@@ -20,8 +19,21 @@
   .about-wrapper {
     display: flex;
     flex-direction: column;
+    width: 1000px;
+    align-self: center;
     align-items: center;
-    justify-content: center;
+
+    // Road Card
+    .asset-card {
+      width: 1200px;
+    }
+
+    svg {
+      height: auto;
+      width: 600px;
+    }
+
+    // Social Media
     .social-media {
       display: flex;
       flex-direction: column;

@@ -13,23 +13,28 @@ import DropdownSelectItem from "../UI/Dropdown/DropdownSelectItem";
 
 // Styles
 import "./Intro.scss";
+import Popup from "../UI/Popup/Popup";
 
 const Intro = () => {
   const dispatch = useDispatch();
   const { ethereum } = window;
   const [userSelect, setuserSelect] = useState("How Much ?!?!");
 
+  const [isPopupShown, setisPopupShown] = useState(false);
   const metaMaskAddress = useSelector(
     (state) => state.app.metaMaskAccountAddress
   );
 
+  const togglePopup = () => {
+    setisPopupShown(!isPopupShown);
+  };
   const onClickConnect = async () => {
     try {
       await ethereum.request({ method: "eth_requestAccounts" });
       const accountAddress = await ethereum.request({ method: "eth_accounts" });
       dispatch(addmetaMaskAccountAddress(accountAddress));
     } catch (error) {
-      alert(error);
+      togglePopup();
     }
   };
   console.log(metaMaskAddress);
@@ -106,6 +111,15 @@ const Intro = () => {
           <div>
             {metaMaskAddress === "" && (
               <MintButton text="Connect Wallet" cbFunc={onClickConnect} />
+            )}
+          </div>
+          <div>
+            {" "}
+            {isPopupShown && (
+              <Popup
+                text="Please Install Meta Mask"
+                href="https://metamask.io/download.html"
+              />
             )}
           </div>
         </div>
