@@ -1,5 +1,5 @@
 // Colors Init
-$green-title: #00ff77;
+$green-title: #00cd5f;
 $purple: #c268ff;
 
 // Font Import
@@ -25,7 +25,7 @@ h1 {
   font-weight: 600;
   font-size: 10vh;
   letter-spacing: 6px;
-  text-shadow: -1px -1px 0px #00ff77, 3px 3px 0px #00ff77, 6px 6px 0px #00ff77,
+  text-shadow: -1px -1px 0px #00cd5f, 3px 3px 0px #00cd5f, 6px 6px 0px #00cd5f,
     9px 9px 9px #c268ff;
   font-family: "Creepster", cursive;
 }
@@ -35,7 +35,7 @@ h3 {
   text-transform: capitalize;
   letter-spacing: 2px;
   color: #c268ff;
-  text-shadow: -1px -1px 0px #00ff77, 1px 1px 0px #00ff77, 2px 2px 0px #00ff77,
+  text-shadow: -1px -1px 0px #00cd5f, 1px 1px 0px #00cd5f, 2px 2px 0px #00cd5f,
     3px 3px 3px #c268ff;
   margin-bottom: 1rem;
   font-family: "Creepster", cursive;
@@ -46,8 +46,8 @@ footer {
   align-items: center;
   justify-content: center;
   height: 4vh;
-  background-color: #ff8181;
+  background-color: #fff2fe;
   font-family: "Creepster", cursive;
-  color: #c268ff;
+  color: #4b5d67;
   letter-spacing: 1px;
 }

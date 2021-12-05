@@ -6,10 +6,10 @@
   display: flex;
   flex-direction: column;
   font-family: "Creepster", cursive;
-  background: #00ff77;
+  background: #00cd5f;
   padding-top: 4rem;
   .mint-button {
-    background-color: #ff8181;
+    background-color: #ff6868;
     align-self: flex-end;
   }
 
@@ -31,7 +31,7 @@
           width: 600px;
         }
         span {
-          color: #ff8181;
+          color: #ff6868;
         }
       }
       .mint-wrapper {
@@ -49,11 +49,11 @@
       .metamask-address {
         display: flex;
         justify-content: center;
-        color: #ff8181;
+        color: #ff6868;
         font-weight: 300 !important;
         letter-spacing: 2px;
         span {
-          color: #ff8181 !important;
+          color: #ff6868 !important;
         }
       }
     }
@@ -80,8 +80,9 @@
 
 p {
   color: #c268ff;
+
   line-height: 28px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   font-size: 18px;
 }
 @keyframes floatAnim {
