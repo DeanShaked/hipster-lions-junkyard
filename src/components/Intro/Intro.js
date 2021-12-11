@@ -1,5 +1,5 @@
 // App
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
@@ -10,25 +10,38 @@ import { ReactComponent as LionSvg } from "../../assets/lion.svg";
 import MintButton from "../UI/mintButton/MintButton";
 import Dropdown from "../UI/Dropdown/Dropdown";
 import DropdownSelectItem from "../UI/Dropdown/DropdownSelectItem";
+import Popup from "../UI/Popup/Popup";
 
 // Styles
 import "./Intro.scss";
-import Popup from "../UI/Popup/Popup";
 
 const Intro = () => {
+  // Components utils objs init
   const dispatch = useDispatch();
   const { ethereum } = window;
-  const [userSelect, setuserSelect] = useState("How Much ?!?!");
 
-  const [isPopupShown, setisPopupShown] = useState(false);
+  // State Init
+  const [userSelect, setuserSelect] = useState("How Much ?!?!"); // User mint amount selection
+  const [isPopupShown, setisPopupShown] = useState(false); // Pop up for error handling
+
+  // Mint Related state init
+  const [name, setName] = useState("");
+  const [desciption, setDesciption] = useState("");
+  const [url, setURL] = useState("");
+
+  // Get the ETH account address of the user from the Redux store for future usage.
   const metaMaskAddress = useSelector(
     (state) => state.app.metaMaskAccountAddress
   );
 
+  // Toggle Error Popup
   const togglePopup = () => {
     setisPopupShown(!isPopupShown);
   };
-  const onClickConnect = async () => {
+
+  // When the user want to connect his wallet, Meta mask pop up will be triggered.
+  // If the user connect successfully his ETH account address will be stored in the Redux store for future usage.
+  const connectWalletPressed = async () => {
     try {
       await ethereum.request({ method: "eth_requestAccounts" });
       const accountAddress = await ethereum.request({ method: "eth_accounts" });
@@ -37,7 +50,9 @@ const Intro = () => {
       togglePopup();
     }
   };
-  console.log(metaMaskAddress);
+
+  useEffect(() => {}, []);
+
   return (
     <section className="intro">
       <div className="top-intro">
@@ -110,7 +125,7 @@ const Intro = () => {
           </div>
           <div>
             {metaMaskAddress === "" && (
-              <MintButton text="Connect Wallet" cbFunc={onClickConnect} />
+              <MintButton text="Connect Wallet" cbFunc={connectWalletPressed} />
             )}
           </div>
           <div>
